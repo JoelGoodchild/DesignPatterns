@@ -3,19 +3,16 @@
 #include "Font.h"
 #include "Input.h"
 #include "Splash.h"
+#include "Splash2.h"
 #include "Loading.h"
 #include "Menu.h"
 #include "Game.h"
+#include "quitSingleton.h"
 
 using namespace aie;
 
-Application2D::Application2D() 
-{
-}
-
-Application2D::~Application2D() 
-{
-}
+Application2D::Application2D() {}
+Application2D::~Application2D() {}
 
 bool Application2D::startup() 
 {
@@ -23,11 +20,11 @@ bool Application2D::startup()
 	m_font = new Font("./font/consolas.ttf", 32);
 	m_pStates = new StateMachine();
 	m_pStates->AddState(new Splash(), 0);
-	m_pStates->AddState(new Loading(), 1);
-	m_pStates->AddState(new Menu(), 2);
+	m_pStates->AddState(new Splash2(), 1);
+	m_pStates->AddState(new Loading(), 2);
 	m_pStates->AddState(new Game(), 3);
+	m_pStates->AddState(new Menu(), 4);
 	m_pStates->PushState(0);
-
 
 	m_cameraX = 0;
 	m_cameraY = 0;
@@ -51,21 +48,7 @@ void Application2D::update(float deltaTime)
 	// input example
 	Input* input = Input::getInstance();
 
-	// use arrow keys to move camera
-	if (input->isKeyDown(INPUT_KEY_UP))
-		m_cameraY += 500.0f * deltaTime;
-
-	if (input->isKeyDown(INPUT_KEY_DOWN))
-		m_cameraY -= 500.0f * deltaTime;
-
-	if (input->isKeyDown(INPUT_KEY_LEFT))
-		m_cameraX -= 500.0f * deltaTime;
-
-	if (input->isKeyDown(INPUT_KEY_RIGHT))
-		m_cameraX += 500.0f * deltaTime;
-
-	// exit the application
-	if (input->isKeyDown(INPUT_KEY_ESCAPE))
+	if (quitSingleton::instance()->getQuit())
 		quit();
 }
 
@@ -83,10 +66,10 @@ void Application2D::draw()
 	m_pStates->Draw(m_2dRenderer);
 
 	// output some text, uses the last used colour
-	char fps[32];
+	/*char fps[32];
 	sprintf_s(fps, 32, "FPS: %i", getFPS());
 	m_2dRenderer->drawText(m_font, fps, 0, 720 - 32);
-	m_2dRenderer->drawText(m_font, "Press Space for sound!", 0, 720 - 64);
+	m_2dRenderer->drawText(m_font, "Press Space for sound!", 0, 720 - 64);*/
 
 	// done drawing sprites
 	m_2dRenderer->end();

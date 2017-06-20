@@ -3,6 +3,8 @@
 
 using namespace aie;
 
+class StateMachine;
+
 class BaseState
 {
 public:
@@ -10,7 +12,7 @@ public:
 	~BaseState() {}
 
 	virtual void OnEnter() = 0;
-	virtual void OnUpdate(float DeltaTime) = 0;
+	virtual void OnUpdate(float DeltaTime, StateMachine* state) = 0;
 	virtual void OnDraw(Renderer2D* m_2dRenderer) = 0;
 	virtual void OnExit() = 0;
 };

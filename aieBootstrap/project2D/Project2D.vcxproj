@@ -98,8 +98,10 @@
     <ClCompile Include="Loading.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="quitSingleton.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="Splash2.cpp" />
     <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -110,8 +112,10 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Loading.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="quitSingleton.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="Splash.h" />
+    <ClInclude Include="Splash2.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="StateMachine.h" />
   </ItemGroup>
