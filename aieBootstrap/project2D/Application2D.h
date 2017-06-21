@@ -23,5 +23,4 @@ protected:
 	StateMachine*		m_pStates;
 
 	float m_cameraX, m_cameraY;
-	float m_timer;
 };

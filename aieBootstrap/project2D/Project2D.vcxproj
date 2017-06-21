@@ -92,7 +92,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application2D.cpp" />
-    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Loading.cpp" />
     <ClCompile Include="main.cpp" />
@@ -106,7 +105,6 @@
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="BaseState.h" />
     <ClInclude Include="dynamicArray.h" />
-    <ClInclude Include="Entity.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Loading.h" />
     <ClInclude Include="Menu.h" />

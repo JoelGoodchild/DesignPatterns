@@ -27,9 +27,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Splash.cpp">
       <Filter>Source Files\States</Filter>
     </ClCompile>
@@ -54,9 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Splash.h">

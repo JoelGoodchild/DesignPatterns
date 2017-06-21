@@ -55,7 +55,11 @@ void Game::OnUpdate(float DeltaTime, StateMachine* state)
 {
 	Input* input = Input::getInstance();
 
+	//Changes the angle of rotation
 	rot += 4 * DeltaTime;
+
+	//Fade in variable for the tip
+	//Begins fading in at 5 seconds
 	if (time > 5)
 		x += DeltaTime / 1.00000001f;
 

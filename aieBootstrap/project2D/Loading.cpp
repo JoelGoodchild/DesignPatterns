@@ -2,11 +2,14 @@
 #include "Texture.h"
 #include "Input.h"
 #include "StateMachine.h"
+#include <assert.h>
 
 Loading::Loading()
 {
 	loading = new Texture("./textures/loading.png");
+	assert(loading);
 	questionMark = new Texture("./textures/questionMark.png");
+	assert(questionMark);
 	rot = 0;
 	x = 0;
 	time = 0;

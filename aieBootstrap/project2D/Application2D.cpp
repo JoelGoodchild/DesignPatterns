@@ -30,7 +30,6 @@ bool Application2D::startup()
 
 	m_cameraX = 0;
 	m_cameraY = 0;
-	m_timer = 0;
 
 	return true;
 }
@@ -44,11 +43,11 @@ void Application2D::shutdown()
 void Application2D::update(float deltaTime) 
 {
 	m_pStates->Update(deltaTime);
-	m_timer += deltaTime;
 
 	// input example
 	Input* input = Input::getInstance();
 
+	//Checks if the program needs to be exited
 	if (quitSingleton::instance()->getQuit())
 		quit();
 }
