@@ -20,11 +20,11 @@ private:
 
 	float rot;
 	float x;
-	float otherx;
 	float time;
-	float quesMX;
-	float quesMY;
+	float playerX;
+	float playerY;
 	bool qMark;
 	bool easterEgg;
+	bool backIn;
 };
 

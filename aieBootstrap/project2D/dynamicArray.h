@@ -1,7 +1,6 @@
 #pragma once
 #include "memory.h"
 
-
 template <typename T>
 
 class dynamicArray
@@ -131,6 +130,11 @@ public:
 	T back()
 	{
 		return data[used - 1];
+	}
+
+	T secondBack()
+	{
+		return data[used - 2];
 	}
 
 private:

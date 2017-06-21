@@ -3,10 +3,12 @@
 #include "Input.h"
 #include "StateMachine.h"
 #include "quitSingleton.h"
+#include <assert.h>
 
 Menu::Menu()
 {
 	menu = new Texture("./textures/pauseMenu.png");
+	assert(menu);
 }
 
 Menu::~Menu()
@@ -14,9 +16,7 @@ Menu::~Menu()
 	delete menu;
 }
 
-void Menu::OnEnter()
-{
-}
+void Menu::OnEnter(){}
 
 void Menu::OnUpdate(float DeltaTime, StateMachine* state)
 {
@@ -34,9 +34,7 @@ void Menu::OnUpdate(float DeltaTime, StateMachine* state)
 void Menu::OnDraw(Renderer2D* m_2dRenderer)
 {
 	m_2dRenderer->setRenderColour(1, 1, 1, 1);
-	m_2dRenderer->drawSprite(menu, 700, 365);
+	m_2dRenderer->drawSprite(menu, 700, 365, 0, 0, 0, -1);
 }
 
-void Menu::OnExit()
-{
-}
+void Menu::OnExit(){}

@@ -34,6 +34,11 @@ public:
 		return s.back();
 	}
 
+	T secondTop()
+	{
+		return s.secondBack();
+	}
+
 	void Clear()
 	{
 		s.Clear();

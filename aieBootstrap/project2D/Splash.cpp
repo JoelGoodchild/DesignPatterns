@@ -2,11 +2,14 @@
 #include "Texture.h"
 #include "Input.h"
 #include "StateMachine.h"
+#include <assert.h>
 
 Splash::Splash()
 {
 	sprite1 = new Texture("./textures/splash.png");
+	assert(sprite1);
 	sprite2 = new Texture("./textures/splash2.png");
+	assert(sprite2);
 	
 	x = 0;
 	time = 0;
@@ -19,9 +22,7 @@ Splash::~Splash()
 	delete sprite1;
 }
 
-void Splash::OnEnter()
-{
-}
+void Splash::OnEnter(){}
 
 void Splash::OnUpdate(float DeltaTime, StateMachine* state)
 {
@@ -39,7 +40,4 @@ void Splash::OnDraw(Renderer2D* m_2dRenderer)
 	m_2dRenderer->drawSprite(sprite2, 700, 340);
 }
 
-void Splash::OnExit()
-{
-
-}
+void Splash::OnExit(){}

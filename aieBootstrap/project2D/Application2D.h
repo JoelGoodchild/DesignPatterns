@@ -21,7 +21,6 @@ protected:
 
 	aie::Renderer2D*	m_2dRenderer;
 	StateMachine*		m_pStates;
-	aie::Font*			m_font;
 
 	float m_cameraX, m_cameraY;
 	float m_timer;

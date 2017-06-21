@@ -8,6 +8,7 @@
 #include "Menu.h"
 #include "Game.h"
 #include "quitSingleton.h"
+#include <assert.h>
 
 using namespace aie;
 
@@ -17,8 +18,9 @@ Application2D::~Application2D() {}
 bool Application2D::startup() 
 {
 	m_2dRenderer = new Renderer2D();
-	m_font = new Font("./font/consolas.ttf", 32);
+	assert(m_2dRenderer);
 	m_pStates = new StateMachine();
+	assert(m_pStates);
 	m_pStates->AddState(new Splash(), 0);
 	m_pStates->AddState(new Splash2(), 1);
 	m_pStates->AddState(new Loading(), 2);
@@ -36,7 +38,6 @@ bool Application2D::startup()
 void Application2D::shutdown() 
 {
 	delete m_pStates;
-	delete m_font;
 	delete m_2dRenderer;
 }
 
@@ -64,12 +65,6 @@ void Application2D::draw()
 	m_2dRenderer->begin();
 
 	m_pStates->Draw(m_2dRenderer);
-
-	// output some text, uses the last used colour
-	/*char fps[32];
-	sprintf_s(fps, 32, "FPS: %i", getFPS());
-	m_2dRenderer->drawText(m_font, fps, 0, 720 - 32);
-	m_2dRenderer->drawText(m_font, "Press Space for sound!", 0, 720 - 64);*/
 
 	// done drawing sprites
 	m_2dRenderer->end();

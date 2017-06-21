@@ -14,8 +14,13 @@ void StateMachine::Update(float deltaTime)
 
 void StateMachine::Draw(Renderer2D* m_2dRenderer)
 {
-	if(Stack.size() > 0)
+	if (Stack.size() > 0)
+	{
 		Stack.top()->OnDraw(m_2dRenderer);
+
+		if(Stack.size() > 4)
+			Stack.secondTop()->OnDraw(m_2dRenderer);
+	}
 }
 
 void StateMachine::PushState(int newState)
