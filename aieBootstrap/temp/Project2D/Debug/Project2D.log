@@ -1,14 +1,13 @@
-﻿  main.cpp
-c:\users\s171844\desktop\designpatternsassignment\aiebootstrap\project2d\main.cpp(8): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  StateMachine.cpp
   Splash2.cpp
-c:\users\s171844\desktop\designpatternsassignment\aiebootstrap\project2d\splash2.cpp(26): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
   Splash.cpp
-c:\users\s171844\desktop\designpatternsassignment\aiebootstrap\project2d\splash.cpp(30): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  quitSingleton.cpp
   Menu.cpp
+  main.cpp
   Loading.cpp
   Game.cpp
-c:\users\s171844\desktop\designpatternsassignment\aiebootstrap\project2d\game.cpp(24): warning C4305: '=': truncation from 'double' to 'float'
   Application2D.cpp
   Generating Code...
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  Project2D.vcxproj -> C:\Users\s171844\Desktop\DesignPatternsAssignment\aieBootstrap\temp\Project2D\Debug\Project2D.exe
+  Project2D.vcxproj -> C:\Users\Joel\Desktop\Design Patterns\aieBootstrap\temp\Project2D\Debug\Project2D.exe
+  Project2D.vcxproj -> C:\Users\Joel\Desktop\Design Patterns\aieBootstrap\temp\Project2D\Debug\Project2D.pdb (Full PDB)

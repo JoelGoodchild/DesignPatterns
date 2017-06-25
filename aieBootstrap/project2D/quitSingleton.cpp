@@ -1,13 +1,14 @@
 #include "quitSingleton.h"
 
 quitSingleton* quitSingleton::ptrInstance = nullptr;
-
+//---------------------------------------------------------------------------------------
 quitSingleton::quitSingleton()
 {
 	quitGame = false;
 }
+//---------------------------------------------------------------------------------------
 quitSingleton::~quitSingleton(){}
-
+//---------------------------------------------------------------------------------------
 quitSingleton* quitSingleton::instance()
 {
 	if (!ptrInstance)
@@ -16,12 +17,12 @@ quitSingleton* quitSingleton::instance()
 	}
 	return ptrInstance;
 }
-
+//---------------------------------------------------------------------------------------
 void quitSingleton::gameQuit()
 {
 	quitGame = true;
 }
-
+//---------------------------------------------------------------------------------------
 bool quitSingleton::getQuit()
 {
 	return quitGame;
